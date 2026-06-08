@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -42,25 +43,28 @@ fun SplashScreen(
     ) {
         Image(
             painter = painterResource(id = R.drawable.logo_geosat),
-            contentDescription = "Logo GeoSat"
+            contentDescription = "Logo GeoSat",
+            modifier = Modifier.size(180.dp)
         )
 
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(24.dp))
 
         Text(
             text = "GEOSAT",
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.White
+            color = Color.White,
+            letterSpacing = 4.sp
         )
 
-        Spacer(modifier = Modifier.height(8.dp))
+        Spacer(modifier = Modifier.height(12.dp))
 
         Text(
             text = "Monitoramento inteligente\ne alertas em tempo real.",
             fontSize = 14.sp,
             color = Color.White.copy(alpha = 0.7f),
             textAlign = TextAlign.Center,
+            lineHeight = 20.sp,
             modifier = Modifier.padding(horizontal = 32.dp)
         )
     }

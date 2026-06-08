@@ -38,14 +38,14 @@ fun HomeMenuItem(
         onClick = onClick
     ){
         Row (
-            modifier = Modifier.padding(16.dp),
+            modifier = Modifier.padding(horizontal = 16.dp, vertical = 20.dp),
             verticalAlignment = Alignment.CenterVertically
         ){
             Icon(
                 imageVector = icon,
                 contentDescription = null,
                 tint = iconColor,
-                modifier = Modifier.size(28.dp)
+                modifier = Modifier.size(32.dp)
             )
 
             Spacer(modifier = Modifier.width(12.dp))

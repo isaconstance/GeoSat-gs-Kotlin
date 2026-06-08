@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
@@ -62,44 +63,47 @@ fun DicasScreen(onBackClick: () -> Unit) {
                 .fillMaxSize()
                 .padding(paddingValues)
                 .padding(horizontal = 16.dp),
-            verticalArrangement = Arrangement.spacedBy(8.dp),
-            contentPadding = PaddingValues(vertical = 8.dp)
+            verticalArrangement = Arrangement.spacedBy(12.dp),
+            contentPadding = PaddingValues(vertical = 12.dp)
         ){
             items(dicas){ dica: Dica ->
                 Card (
                     modifier = Modifier.fillMaxWidth(),
                     shape = RoundedCornerShape(12.dp),
+                    elevation = CardDefaults.cardElevation(defaultElevation = 4.dp),
                     colors = CardDefaults.cardColors(containerColor = Color.White)
                 ){
                     Row (
                         modifier = Modifier.padding(16.dp),
-                        verticalAlignment = Alignment.CenterVertically
+                        verticalAlignment = Alignment.Top
                     ){
                         Icon(
                             imageVector = dica.icon,
                             contentDescription = null,
                             tint = Color(0xFF1565C0),
-                            modifier = Modifier.size(36.dp)
+                            modifier = Modifier
+                                .size(40.dp)
+                                .padding(top = 2.dp)
                         )
 
                         Spacer(modifier = Modifier.width(16.dp))
 
-                        Column {
+                        Column(modifier = Modifier.weight(1f)) {
                             Text(
                                 text = dica.titulo,
                                 fontWeight = FontWeight.Bold,
-                                fontSize = 14.sp
+                                fontSize = 15.sp
+                            )
+
+                            Spacer(modifier = Modifier.height(6.dp))
+
+                            Text(
+                                text = dica.descricao,
+                                fontSize = 13.sp,
+                                color = Color.Gray,
+                                lineHeight = 18.sp
                             )
                         }
-
-                        Spacer(modifier = Modifier.height(4.dp))
-
-                        Text(
-                            text = dica.descricao,
-                            fontSize = 12.sp,
-                            color = Color.Gray
-                        )
-
                     }
                 }
             }
