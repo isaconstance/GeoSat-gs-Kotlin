@@ -52,7 +52,7 @@ fun HomeMenuItem(
 
             Column (modifier = Modifier.weight(1f)){
                 Text(titulo, fontWeight = FontWeight.Bold)
-                Text(subtitulo, fontSize = 12.sp, color = Color.Gray)
+                Text(subtitulo, fontSize = 12.sp, color = Color.Gray, fontWeight = FontWeight.SemiBold)
             }
             Text(">", fontSize = 20.sp, color = Color.Gray)
         }

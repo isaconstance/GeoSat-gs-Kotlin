@@ -112,7 +112,8 @@ fun HomeScreen(
                             Text(
                                 "Status da região",
                                 fontSize = 12.sp,
-                                color = Color.Gray
+                                color = Color.Gray,
+                                fontWeight = FontWeight.SemiBold
                             )
 
                             Text(
@@ -125,7 +126,8 @@ fun HomeScreen(
                             Text(
                                 "Chance de chuva forte hoje.",
                                 fontSize = 12.sp,
-                                color = Color.Gray
+                                color = Color.Gray,
+                                fontWeight = FontWeight.SemiBold
                             )
                         }
                     }
