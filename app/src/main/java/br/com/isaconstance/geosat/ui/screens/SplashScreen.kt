@@ -30,7 +30,7 @@ fun SplashScreen(
     onNavigateToIntro: () -> Unit
 ) {
     LaunchedEffect(Unit){
-        delay(4000L)
+        delay(3000L)
         onNavigateToIntro()
     }
 
